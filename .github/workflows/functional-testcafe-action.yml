@@ -1,4 +1,4 @@
-name: End-to-End tests  
+name: End-to-End tests with TestCafe action  
 
 on:
   pull_request:
