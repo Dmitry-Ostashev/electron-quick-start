@@ -18,5 +18,6 @@ jobs:
         run: npm install
 
       - name: Run tests
+        uses: DevExpress/testcafe-action@latest
         with:
-            args: "npx testcafe electron:. ./tests/test.js -p '${DATE}_${TIME}_${TEST_ID}.png' -S -s screenshots"
+            args: "electron:. ./tests/test.js -p '${DATE}_${TIME}_${TEST_ID}.png' -S -s screenshots"
