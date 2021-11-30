@@ -4,13 +4,25 @@ fixture`Screenshot tests`
     .page`../index.html`
     .before(() => {
         if (fs.existsSync('./screenshots')) {
-            console.log('Folder contnet before: ');
+            console.log('Folder contet before: ');
             console.log(fs.readdirSync('./screenshots'));
         }
     })
     .after(() => {
         if (fs.existsSync('./screenshots')) {
-            console.log('Folder contnet after: ');
+            console.log('Folder contet after: ');
+            console.log(fs.readdirSync('./screenshots'));
+        }
+    })
+    .beforeEach(() => {
+        if (fs.existsSync('./screenshots')) {
+            console.log('Folder contet before each: ');
+            console.log(fs.readdirSync('./screenshots'));
+        }
+    })
+    .afterEach(() => {
+        if (fs.existsSync('./screenshots')) {
+            console.log('Folder contet after each: ');
             console.log(fs.readdirSync('./screenshots'));
         }
     });
